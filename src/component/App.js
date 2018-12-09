@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Navbar from './Navbar';
 import SigninPage from './SigninPage';
 import NewQuestionPage from './NewQuestionPage';
+import JudgeItem from './JudgeItem';
 
 class App extends Component {
   constructor(props) {
@@ -25,6 +26,7 @@ class App extends Component {
             <Route path="/home" render={props=><SigninPage login={this.state.login}/>}/>
             <Route path="/signin" render={props=><SigninPage login={this.state.login}/>}/>
             <Route path="/newprob" component={NewQuestionPage}/>
+            <Route path ="/judge" component={JudgeItem}/>
           </div>
         </Router>
       </div>

@@ -95,10 +95,10 @@ export default class Navbar extends Component {
                         }
                     </div>
                 </nav>
-                <br />
+                {/* <br />
                 <hr />
 
-                <button onClick={this.handleClick}>按钮测试props</button>
+                <button onClick={this.handleClick}>按钮测试props</button> */}
             </div>
         )
     }
