@@ -8,15 +8,12 @@ export default class SigninPage extends Component {
             account: '',
             password: '',
             identity: 1,
-            login: this.props.login
         }
     };
     handelForm = (e) => {
         e.preventDefault();
         if (!this.state.login) {
-            this.setState({
-                login: !this.state.login
-            })
+            this.props.signin();
         }
     }
 

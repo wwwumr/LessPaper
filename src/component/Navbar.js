@@ -7,12 +7,12 @@ export default class Navbar extends Component {
         super(props);
 
         this.state = {
-            login: this.props.login
+
         }
     }
 
     handleClick = () => {
-        if (this.state.login)
+        if (this.props.login)
             alert("已经登录啦！");
         else
             alert("还没登录哦");
@@ -37,11 +37,11 @@ export default class Navbar extends Component {
 
                     <div id="navbar" className="collapse navbar-collapse">
                         {
-                            this.state.login ?
+                            this.props.login ?
                                 (
                                     <ul className="nav navbar-nav">
                                         <li className="active">
-                                            <Link to="/homeSignin">主页</Link>
+                                            <Link to="/home">主页</Link>
                                         </li>
                                         <li>
                                             <Link to="/newprob">新建问题</Link>
@@ -57,7 +57,7 @@ export default class Navbar extends Component {
                                 (
                                     <ul className="nav navbar-nav">
                                         <li className="active">
-                                            <Link to="/home">主页</Link>
+                                            <Link to="/">主页</Link>
                                         </li>
                                         <li>
                                             <Link to="/contact">联系我们</Link>
@@ -66,12 +66,12 @@ export default class Navbar extends Component {
                                 )
                         }
                         {
-                            this.state.login ?
+                            this.props.login ?
                                 (
                                     <ul class="nav navbar-nav navbar-right">
                                         <li class="dropdown">
                                             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                                aria-expanded="false">欢迎回来,<i>username!</i>
+                                                aria-expanded="false">欢迎回来,<i>{this.props.username}!</i>
                                                 <span class="caret"></span>
                                             </a>
                                             <ul class="dropdown-menu">
@@ -83,12 +83,15 @@ export default class Navbar extends Component {
                                                 </li>
                                             </ul>
                                         </li>
+                                        <li>
+                                            <a herf="/" onClick={this.props.signout}>注销</a>
+                                        </li>
                                     </ul>
                                 ) :
                                 (
                                     <ul className="nav navbar-nav navbar-right">
                                         <li>
-                                            <Link to="/signin">请登录</Link>
+                                            <Link to="/">请登录</Link>
                                         </li>
                                     </ul>
                                 )
