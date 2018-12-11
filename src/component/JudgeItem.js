@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 import '../assets/css/judge.css';
 
 export default class JudgeItem extends Component {
@@ -27,17 +29,17 @@ export default class JudgeItem extends Component {
                     <form className="form-grades">
                         <div className="row">
                             <div className="col-lg-4">
-                                <label for="grades" style={{ "font-size": "180%" }}>分数</label>
-                                <input className="form-control" onClick={this.handelGrade} type="number" min={this.state.minGrade} max={this.state.maxGrade} id="grades" autofocus />
+                                <label htmlFor="grades" style={{ "fontSize": "180%" }}>分数</label>
+                                <input className="form-control" onClick={this.handelGrade} type="number" min={this.state.minGrade} max={this.state.maxGrade} id="grades" autoFocus />
                             </div>
                             <div className="col-lg-4">
                                 <button className="btn btn-primary col-lg-3" type="submit">上一个</button>
                                 <button className="btn btn-primary col-lg-3 col-lg-offset-2" type="submit">下一个</button>
                             </div>
                             <div className="col-lg-4">
-                                <a href="./result.html">
+                                <Link to="./result">
                                     <input type="button" className="btn btn-primary col-lg-3 col-lg-offset-5" value="结束" />
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </form>

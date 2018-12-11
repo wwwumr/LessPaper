@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 import '../assets/css/newProblem.css';
 
 export default class NewQuestionPage extends Component {
@@ -50,12 +52,16 @@ export default class NewQuestionPage extends Component {
                     {/* <a href="./judge.html">
                         <input type="button submit" className="btn btn-primary" value="暂存" />
                     </a>
-                    <a href="./judge.html">
+                    <a href="./judge">
                         <input type="button submit" className="btn btn-primary" value="开始分析" />
                     </a> */}
 
                     <button className="btn btn-primary" onClick={this.tempStore}>暂存</button>
-                    <button type="submit" className="btn btn-primary ">开始分析</button>
+                    {/* <button type="submit" className="btn btn-primary">开始分析</button> */}
+                    <Link to="./judge">
+                        <button className="btn btn-primary">开始分析</button>
+                        {/* <input type="button submit" className="btn btn-primary" value="开始分析" /> */}
+                    </Link>
                 </form>
             </div>
         )
