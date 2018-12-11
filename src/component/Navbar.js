@@ -7,7 +7,8 @@ export default class Navbar extends Component {
         super(props);
 
         this.state = {
-
+            login: this.props.login,
+            username:this.props.username
         }
     }
 
@@ -71,7 +72,7 @@ export default class Navbar extends Component {
                                     <ul class="nav navbar-nav navbar-right">
                                         <li class="dropdown">
                                             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                                aria-expanded="false">欢迎回来,<i>{this.props.username}!</i>
+                                                aria-expanded="false">欢迎回来,<i>{this.state.username}!</i>
                                                 <span class="caret"></span>
                                             </a>
                                             <ul class="dropdown-menu">
@@ -79,7 +80,7 @@ export default class Navbar extends Component {
                                                     <a href="/settings">设置</a>
                                                 </li>
                                                 <li>
-                                                    <a href="/signout">注销</a>
+                                                    <a href="/">注销</a>
                                                 </li>
                                             </ul>
                                         </li>

@@ -50,12 +50,15 @@ export default class NewQuestionPage extends Component {
                     {/* <a href="./judge.html">
                         <input type="button submit" className="btn btn-primary" value="暂存" />
                     </a>
-                    <a href="./judge.html">
+                    <a href="./judge">
                         <input type="button submit" className="btn btn-primary" value="开始分析" />
                     </a> */}
 
                     <button className="btn btn-primary" onClick={this.tempStore}>暂存</button>
-                    <button type="submit" className="btn btn-primary ">开始分析</button>
+                    {/* <button type="submit" className="btn btn-primary">开始分析</button> */}
+                    <a href="./judge">
+                        <input type="button submit" className="btn btn-primary" value="开始分析" />
+                    </a>
                 </form>
             </div>
         )
