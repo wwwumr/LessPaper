@@ -6,6 +6,7 @@ import SigninPage from './SigninPage';
 import NewQuestionPage from './NewQuestionPage';
 import JudgeItem from './JudgeItem';
 import ResultPage from './ResultPage';
+import Footer from './Footer';
 
 class App extends Component {
   constructor(props) {
@@ -36,14 +37,13 @@ class App extends Component {
         <Router>
           <div>
           <Navbar login={this.state.login} username={this.state.account} signout={this.handelSignout} />
-            {/* {!this.state.login && <SigninPage login={this.state} />} */}
-
             {!this.state.login && <Route exact path="/" render={props => <SigninPage login={this.state.login} signin={this.handelSignin} />} />}
             {this.state.login && <Route path="/newprob" component={NewQuestionPage} />}
             <Route path="/judge" component={JudgeItem} />
             <Route path="/result" component={ResultPage}/>
           </div>
         </Router>
+        <Footer/>
       </div>
     );
   }

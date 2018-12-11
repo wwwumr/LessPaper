@@ -1,5 +1,5 @@
 # TODOS
-- [ ] Footer.js中<Footer/>组件的样式没有弄好
+- [x] Footer.js中<Footer/>组件的样式没有弄好
 - [ ] NewQuestionPage的样式没有设计好，主要是下面两个按钮的位置
 - [x] 父子组件的传值，数据双向流动
 - [ ] NewQuestionPage组件中，关于本地文件的保存形式，以及想通过localstorage实现暂存数据
@@ -7,5 +7,6 @@
 - [x] JudgeItem的布局没有搞好
 - [x] react-router在有登录状态的跳转有问题
 - [ ] react-router一些复杂的用法，这个好像需要结合后端
+- [ ] 在未登录的状态下，打开的地址不会自动跳转，显示的是空白（没有组件）
 - [ ] resultPage里的panel好像跟静态的网页不太一样，这个可能是bootstrap的问题
 - [ ] 很想用AntD重新弄一下UI，但是感觉这个工作量有点大。。。
