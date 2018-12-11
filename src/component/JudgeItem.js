@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 import '../assets/css/judge.css';
 
 export default class JudgeItem extends Component {
@@ -35,9 +37,9 @@ export default class JudgeItem extends Component {
                                 <button className="btn btn-primary col-lg-3 col-lg-offset-2" type="submit">下一个</button>
                             </div>
                             <div className="col-lg-4">
-                                <a href="./result">
+                                <Link to="./result">
                                     <input type="button" className="btn btn-primary col-lg-3 col-lg-offset-5" value="结束" />
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </form>

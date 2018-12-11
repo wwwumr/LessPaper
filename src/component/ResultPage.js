@@ -43,8 +43,7 @@ export default class ResultPage extends Component {
             <div>
                 <div className="panel panel-default">
                     <div className="panel-heading">结果</div>
-                    <div className="panel-body">
-                        
+                    <div className="panel-body">                        
                             <table className="table table-striped table-hover">
                                 <thead>
                                     <tr>
@@ -63,8 +62,7 @@ export default class ResultPage extends Component {
                                         )
                                     })}
                                 </tbody>
-                            </table>
-                        
+                            </table>                       
                     </div>
                 </div>
 

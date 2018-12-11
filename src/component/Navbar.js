@@ -12,13 +12,6 @@ export default class Navbar extends Component {
         }
     }
 
-    handleClick = () => {
-        if (this.props.login)
-            alert("已经登录啦！");
-        else
-            alert("还没登录哦");
-    }
-
     render() {
         return (
             <div>
@@ -41,7 +34,7 @@ export default class Navbar extends Component {
                             this.props.login ?
                                 (
                                     <ul className="nav navbar-nav">
-                                        <li className="active">
+                                        <li>
                                             <Link to="/home">主页</Link>
                                         </li>
                                         <li>
@@ -69,23 +62,20 @@ export default class Navbar extends Component {
                         {
                             this.props.login ?
                                 (
-                                    <ul class="nav navbar-nav navbar-right">
-                                        <li class="dropdown">
-                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    <ul className="nav navbar-nav navbar-right">
+                                        <li className="dropdown">
+                                            <a className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                                                 aria-expanded="false">欢迎回来,<i>{this.state.username}!</i>
-                                                <span class="caret"></span>
+                                                <span className="caret"></span>
                                             </a>
-                                            <ul class="dropdown-menu">
+                                            <ul className="dropdown-menu">
                                                 <li>
-                                                    <a href="/settings">设置</a>
+                                                    <Link to="/settings">设置</Link>
                                                 </li>
                                                 <li>
-                                                    <a href="/">注销</a>
+                                                    <Link to="/" onClick={this.props.signout}>注销</Link>
                                                 </li>
                                             </ul>
-                                        </li>
-                                        <li>
-                                            <a herf="/" onClick={this.props.signout}>注销</a>
                                         </li>
                                     </ul>
                                 ) :
@@ -99,10 +89,6 @@ export default class Navbar extends Component {
                         }
                     </div>
                 </nav>
-                {/* <br />
-                <hr />
-
-                <button onClick={this.handleClick}>按钮测试props</button> */}
             </div>
         )
     }
