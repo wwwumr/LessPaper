@@ -24,6 +24,7 @@ export default class NewQuestionPage extends Component {
         })
     }
 
+    //TODO:暂存写入的数据
     tempStore=()=>{}
     
     render() {

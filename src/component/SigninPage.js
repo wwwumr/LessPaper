@@ -35,11 +35,6 @@ export default class SigninPage extends Component {
         })
     }
 
-    debug = () => {
-        console.log(this.state.account, this.state.password, this.state.identity, this.state.login);
-
-    }
-
     render() {
         return (
             <div>
@@ -59,10 +54,10 @@ export default class SigninPage extends Component {
                             <div className="radio-inline">
                                 <label style={{ "paddingRight": "80px", "paddingTop": "10px", "paddingBottom": "10px" }}>
                                     <input type="radio" name="identity" value="1" checked={this.state.identity == 1} onChange={this.handelID} />老师
-            </label>
+                                </label>
                                 <label>
                                     <input type="radio" name="identity" value="2" checked={this.state.identity == 2} onChange={this.handelID} />学生
-            </label>
+                                </label>
                             </div>
                             <button className="btn btn-lg btn-primary btn-block" type="submit" onClick={this.debug}>登录</button>
                         </form>
