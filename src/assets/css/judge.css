@@ -1,0 +1,14 @@
+.container .stuAns{
+    padding: 15px;
+
+}
+ .form-grades{
+  margin: auto;
+  padding-top: 200px;
+}
+ .form-grades .col-lg-4{
+  padding-bottom: 40px;
+}
+.form-grades .col-lg-4>input{
+  width: 220px;
+}
